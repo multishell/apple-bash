@@ -55,6 +55,11 @@
 #include "rlprivate.h"
 #include "xmalloc.h"
 
+/* Patch for Multishell */
+#ifndef SIGWINCH
+#include "signal.h"
+#endif
+
 #if !defined (strchr) && !defined (__STDC__)
 extern char *strchr (), *strrchr ();
 #endif /* !strchr && !__STDC__ */
